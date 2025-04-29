@@ -1,0 +1,117 @@
+.search-container {
+  padding: 1rem;
+  background: linear-gradient(to bottom, #e6eaf0, #cdd3dd); /* Light-dark gradient */
+  border-bottom: 1px solid #d0d4dc;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  padding-right: 2.5rem;
+  background-color: #f0f3f8; /* Slightly darker than before for contrast */
+  border: 1px solid #d4dae3;
+  border-radius: 1.5rem;
+  font-size: 0.95rem;
+  color: #2d3748;
+  transition: all 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0084ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.1);
+}
+
+.search-input:hover {
+  background-color: #e6e9f0;
+}
+
+/* Clear Button Styling */
+.clear-button {
+  position: absolute;
+  right: 0.8rem;
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+  background-color: #d6dae1;
+  color: #4a5568;
+}
+
+.clear-button:active {
+  transform: scale(0.95);
+}
+
+/* Animation for clear button appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.clear-button {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .search-container {
+    padding: 0.8rem;
+  }
+
+  .search-input {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .search-input {
+    border: 2px solid #2d3748;
+  }
+  
+  .search-input:focus {
+    border-color: #000000;
+    box-shadow: none;
+  }
+
+  .clear-button {
+    color: #2d3748;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .search-input,
+  .clear-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,52 @@
+.marquee-container {
+    width: 100%;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    height: 50px;
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 50s linear infinite; /* Increased duration for slower speed */
+    align-items: center;
+}
+
+.marquee-content {
+    display: inline-flex;
+}
+
+.new-badge {
+    background: linear-gradient(45deg, #e74c3c, #3498db);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    animation: pulse 1.5s infinite;
+}
+
+.marquee p {
+    display: inline-block;
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}

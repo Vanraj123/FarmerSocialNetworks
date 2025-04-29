@@ -1,0 +1,187 @@
+/* UserProfile.css */
+.userprofile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center; /* Center content inside the container */
+}
+
+.userprofile-container h2 {
+    display: inline-block; /* Make the header an inline block to center it */
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.userprofile-container h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 60%;
+    height: 4px;
+    background-color: #28a745;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center; /* Center the profile logo horizontally */
+    align-items: center; /* Center the profile logo vertically */
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #007bff; /* Add a border for a stylish look */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-image-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* Form group */
+.userprofile-container .form-group {
+    position: relative;
+    margin-bottom: 25px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.userprofile-container label {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.userprofile-container input[type="text"],
+.userprofile-container input[type="email"],
+.userprofile-container textarea,
+.userprofile-container input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.userprofile-container input[type="text"]:focus,
+.userprofile-container input[type="email"]:focus,
+.userprofile-container textarea:focus,
+.userprofile-container input[type="file"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+    background-color: #fff;
+}
+
+.userprofile-container input:focus + label,
+.userprofile-container input:not(:placeholder-shown) + label {
+    top: -12px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+.userprofile-container .button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Add more space between the buttons */
+    margin-top: 30px; /* Add more space above the buttons */
+}
+
+.userprofile-container button {
+    padding: 14px 28px; /* Larger padding for a modern look */
+    font-size: 16px; /* Larger font size for better readability */
+    border: none;
+    border-radius: 8px; /* More rounded corners for a modern feel */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add a smooth transition effect */
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Default gradient background */
+    color: white;
+}
+
+.userprofile-container button:hover {
+    transform: translateY(-3px); /* Slightly lift the button when hovered */
+}
+
+.userprofile-container .submit-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.userprofile-container .submit-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003580);
+}
+
+.userprofile-container .cancel-btn {
+    background: linear-gradient(135deg, #6c757d, #494e53);
+}
+
+.userprofile-container .cancel-btn:hover {
+    background: linear-gradient(135deg, #494e53, #333639);
+}
+
+.userprofile-container .edit-btn {
+    background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.userprofile-container .edit-btn:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+}
+
+/* Alert Messages */
+.userprofile-container .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.userprofile-container .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.userprofile-container .alert-error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}

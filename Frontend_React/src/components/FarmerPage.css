@@ -1,0 +1,63 @@
+.farmer-dashboard {
+    background-color: #f8f9fa;
+  }
+  
+  .dashboard-title {
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .crop-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.125);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .crop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .crop-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .crop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .crop-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .crop-details {
+    border-left: 3px solid #4285f4;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .search-input {
+    border-radius: 20px;
+    padding-left: 15px;
+  }
+  
+  .recommendation-list li {
+    margin-bottom: 8px;
+  }
+  
+  .crop-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+  }
+  
+  .crop-tabs .nav-link.active {
+    font-weight: 600;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }

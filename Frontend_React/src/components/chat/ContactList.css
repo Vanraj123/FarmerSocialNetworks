@@ -1,0 +1,128 @@
+.contacts-container {
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e2e6ec, #c3c9d6);
+  border-right: 1px solid #d0d4dc;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.contact-item {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.contact-item:hover {
+  background-color: #f0f4fc;
+}
+
+.contact-item.selected {
+  background-color: #e8f0fe;
+  border-left: 3px solid #0084ff;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0084ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+}
+
+.status-online {
+  background-color: #34d399;
+}
+
+.status-offline {
+  background-color: #9ca3af;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2d3748;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Scrollbar Styling */
+.contacts-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contacts-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.contacts-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.contacts-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animation for new messages or status changes */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.contact-item.has-new-message {
+  animation: pulse 0.5s ease-in-out;
+}

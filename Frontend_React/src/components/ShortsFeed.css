@@ -1,0 +1,98 @@
+.shorts-feed {
+  height: calc(100vh - 160px); /* Adjust based on header/footer height (assuming 80px each) */
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  background-color: black;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.shorts-feed::-webkit-scrollbar {
+  display: none;
+}
+
+.short-item {
+  height: calc(100vh - 160px);
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-align: left;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.shorts-video {
+  max-height: 70vh;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.short-text-container {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  text-align: left;
+  max-width: 90%;
+  width: auto;
+  word-wrap: break-word; /* Ensures text wraps properly */
+  white-space: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text & delete button to left */
+}
+
+.short-title,
+.short-description {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 40%;
+  text-align: left;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.short-title {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.short-description {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Delete button BELOW description, aligned to the left */
+.delete-button {
+  margin-top: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}

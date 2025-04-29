@@ -1,0 +1,120 @@
+/* PostFormComponent.css */
+
+.postform-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #555;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+input[type="text"],
+textarea,
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    padding-top: 20px; /* Space for the floating label */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input:focus + label,
+textarea:focus + label,
+select:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label,
+select:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+.postform-container .postform-image-preview {
+    margin-top: 10px;
+    max-height: 200px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.postform-container .postform-image-preview img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* To maintain aspect ratio */
+}
+

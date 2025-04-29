@@ -1,0 +1,31 @@
+.user-list {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.user-list h3 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.user-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list li {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}

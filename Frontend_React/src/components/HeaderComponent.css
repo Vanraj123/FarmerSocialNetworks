@@ -1,0 +1,268 @@
+/* Header Navbar styling - Enhanced for maturity and smoothness */
+.header-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #1a2530; /* Darker, more sophisticated navy */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+/* Navbar container adjustments */
+.header-navbar .navbar-collapse {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Navbar link container adjustments */
+.header-navbar .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for navbar links - Enhanced with smooth transitions */
+.header-navbar .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sophisticated hover effect with subtle animation */
+.header-navbar .nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #1abc9c;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.header-navbar .nav-link:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Remove right margin for the last link */
+.header-navbar .nav-link:last-child {
+    margin-right: 0;
+}
+
+/* Styling for links on hover */
+.header-navbar .nav-link:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Profile image styling with refined appearance */
+.header-navbar .profile-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.header-navbar .profile-image:hover {
+    border-color: #1abc9c;
+    transform: scale(1.05);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header-navbar .profile-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-navbar .nav-link {
+        font-size: 0.85rem;
+        margin-right: 0.8rem;
+    }
+}
+
+/* Styling for dropdown menu with smooth transitions */
+.header-navbar .nav-item .dropdown-menu {
+    background-color: #1a2530;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: top center;
+    transform: translateY(10px);
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+}
+
+.header-navbar .nav-item:hover .dropdown-menu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Styling for dropdown items */
+.header-navbar .nav-item .dropdown-item {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 0.7rem 1.2rem;
+}
+
+/* Dropdown item hover effect */
+.header-navbar .nav-item .dropdown-item:hover {
+    background-color: rgba(26, 188, 156, 0.1);
+    color: #1abc9c;
+    transform: translateX(5px);
+}
+
+/* Navbar brand styling with refined appearance */
+.header-navbar .navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    align-items: center;
+}
+
+.header-navbar .navbar-brand:hover {
+    color: #1abc9c;
+    transform: scale(1.02);
+}
+
+/* Optional styling for the profile dropdown */
+.header-navbar .profile-dropdown {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Enhanced brand text styling */
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+}
+
+.brand-text:hover {
+    color: #1abc9c !important;
+}
+
+/* Enhanced nav links styling */
+.nav-links {
+    align-items: center;
+}
+
+.nav-link-item {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link-item:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: -1;
+}
+
+.nav-link-item:hover:before {
+    height: 100%;
+}
+
+.nav-link-item:hover {
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+/* Enhanced dropdown styling */
+.nav-dropdown .dropdown-toggle {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding: 0.5rem 1rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-dropdown .dropdown-toggle:hover {
+    color: #fff !important;
+}
+
+.dropdown-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(26, 188, 156, 0.05);
+    color: #1abc9c;
+    transform: translateX(5px);
+}
+
+/* Enhanced profile image styling */
+.profile-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.profile-image:hover {
+    border-color: #1abc9c;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.3);
+}
+
+/* Active link styling with refined appearance */
+.nav-link-item.active {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .nav-link-item {
+        padding: 0.7rem 1rem !important;
+    }
+    
+    .nav-dropdown .dropdown-toggle {
+        padding: 0.7rem 1rem !important;
+    }
+}

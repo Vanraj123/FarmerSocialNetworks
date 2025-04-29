@@ -1,0 +1,206 @@
+.registration-card {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registration-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.registration-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.logo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+    border-color: #16a34a;
+}
+
+.profile-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.default-avatar {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.floating-input-group {
+    position: relative;
+    height: 56px;
+}
+
+.floating-input-group input,
+.floating-input-group select {
+    width: 100%;
+    height: 56px;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.floating-input-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1.1rem;
+    background-color: white;
+    padding: 0 0.25rem;
+    color: #6b7280;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.floating-input-group input:focus,
+.floating-input-group select:focus {
+    border-color: #22c55e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+.floating-input-group input:focus ~ label,
+.floating-input-group input:not(:placeholder-shown) ~ label,
+.floating-input-group select:focus ~ label,
+.floating-input-group select:not([value=""]) ~ label {
+    top: -0.5rem;
+    left: 0.75rem;
+    font-size: 0.875rem;
+    color: #22c55e;
+}
+
+.file-input-group {
+    position: relative;
+    height: 56px;
+}
+
+.file-input-group input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-input-group label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border: 2px dashed #e5e7eb;
+    border-radius: 8px;
+    color: #6b7280;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.file-input-group:hover label {
+    border-color: #22c55e;
+    color: #22c55e;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #16a34a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-card {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .registration-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes float-label {
+    from {
+        top: 1.1rem;
+        font-size: 1rem;
+    }
+    to {
+        top: -0.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+.floating-input-group input:focus ~ label,
+.floating-input-group input:not(:placeholder-shown) ~ label {
+    animation: float-label 0.2s ease forwards;
+}
